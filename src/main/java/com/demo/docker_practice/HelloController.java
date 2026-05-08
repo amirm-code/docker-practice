@@ -32,15 +32,4 @@ public class HelloController {
                 "timestamp", LocalDateTime.now().toString()
         );
     }
-    @Service
-    public class NotificationService {
-
-        private final EmailService emailService ;
-        private final SmsService smsService ;
-
-        public void notify(String message) {
-            emailService.send(message);
-            smsService.send(message);
-        }
-    }
 }
